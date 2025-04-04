@@ -1,0 +1,4 @@
+.venu/
+migrations/
+db.sqlite3
+identifier.qslite

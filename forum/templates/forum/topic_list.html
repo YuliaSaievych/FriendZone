@@ -1,0 +1,25 @@
+{% extends "forum/forum-feed.html" %}
+
+{% block forum_content %}
+
+{% load static %}
+
+<ul>
+    {% for topic in topics %}
+        <li>
+            <div class="header-topic">
+                <a href="{% url 'topic_detail' topic.pk %}">{{ topic.title }}</a>
+                <small>{{ topic.created_by.username }}</small>
+            </div>
+            <p>{{ topic.description }}</p>
+            <div class="footer-topic">
+                <p>{{ topic.created_at|date:"d.m.Y H:i" }}</p>
+                <p>{{ topic.posts.count }} відповідей</p>
+            </div>
+            
+        
+        </li>
+    {% endfor %}
+</ul>
+    
+{% endblock %}

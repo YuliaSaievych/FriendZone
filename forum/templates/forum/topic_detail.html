@@ -1,0 +1,30 @@
+{% extends "forum/forum-feed.html" %}
+
+{% block forum_content %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'forum/../../../static/css/forum.css' %}">
+
+<h1>{{ topic.title }}</h1>
+<p>{{ topic.description }}</p>
+<small>Автор: {{ topic.created_by.username }} | {{ topic.created_at|date:"d.m.Y H:i" }}</small>
+
+<h2>Коментарі:</h2>
+{% for comment in comments %}
+    <p>{{ comment.message }} - <small>{{ comment.created_by.username }}</small></p>
+{% empty %}
+    <p>Немає коментарів</p>
+{% endfor %}
+
+
+{% if user.is_authenticated %}
+    <h2>Залишити коментар:</h2>
+    <form method="post" action="{% url 'add_comment' topic.pk %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Коментувати</button>
+    </form>
+{% else %}
+    <p>Щоб залишити коментар, <a href="{% url 'login' %}">увійдіть</a>.</p>
+{% endif %}
+{% endblock %}

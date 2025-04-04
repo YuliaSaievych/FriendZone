@@ -1,0 +1,122 @@
+html {
+    background-color: #111826;
+    color: #F2F2F2;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 24px 40px;
+    border-bottom: 1px solid #F2F2F2;
+    height: 10vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    z-index: 100;
+    background-color: #111826;
+}
+
+a {
+    font-size: 24px;
+    color: #F2F2F2;
+    text-decoration: none;
+}
+
+.header-topic, .footer-topic {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px;
+}
+li {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+
+}
+
+
+main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+p {
+    font-size: 16px;
+
+}
+
+.aside-right {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    padding: 40px;
+    height: 95vh;
+    width: 30%;
+    position: fixed;
+    top: 10vh;
+    left: 0;
+    overflow-y: hidden;
+    box-sizing: border-box;
+    z-index: 100;
+}
+.aside-left {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    padding: 40px;
+    height: 95vh;
+    width: 25%;
+    position: fixed;
+    top: 10vh;
+    right: 0;
+    overflow-y: hidden;
+    box-sizing: border-box;
+    z-index: 100;
+}
+.main-content {
+    padding-left: 200px;
+    padding-top: 100px;
+    position: relative;
+    z-index: 1;
+    width: 55%;
+}
+
+.list-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+    gap: 40px;
+}
+
+.header-list {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.btn {
+    font-size: 16px;
+    padding: 8px 16px;
+    background-color: #F2F2F2;
+    border-radius: 48px;
+    color: #111826;
+
+}

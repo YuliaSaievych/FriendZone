@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %}Список тем{% endblock %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static '/css/forum.css' %}">
+    <main>
+<aside class="aside-right">
+    <p>пошук</p>
+    <p>додому</p>
+    <p>теги</p>
+    <p>користувачі</p>
+    <hr style="height:1px;border-width:0;color:#F2F2F2;background-color:#F2F2F2">
+    <details>
+        <summary>Теми</summary>
+        <ul>
+            <li>Всі</li>
+        </ul>
+    </details>
+    <hr style="height:1px;border-width:0;color:#F2F2F2;background-color:#F2F2F2">
+    
+    <p>Про FriendZone</p>
+    <p>Користувачі</p>
+</aside>
+    <div class="main-content">
+    <div class="list-header">
+    <div class="header-list">
+        <h3>Останні питання</h3>
+        <a href="#" class="btn"><i class="fa-regular fa-plus"></i>Нове</a>
+    </div>
+    <div class="header-list">
+        <p>Запитань: {{ total_topics }}</p>
+        <p>Фільтр</p>
+    </div>
+</div>
+             {% block forum_content %}{% endblock %}
+    </div>
+
+    <aside class="aside-left">
+    <h1>Нове</h1>
+    <div class="new-system-not">         
+        <hr style="height:1px;border-width:0;color:#F2F2F2;background-color:#F2F2F2">
+        <p>Ми запустилися</p>
+        <p>Скоріше реєструйся!</p>
+        <hr style="height:1px;border-width:0;color:#F2F2F2;background-color:#F2F2F2">
+    </div>
+    <h1>Популярні ком'юніті</h1>
+        <hr style="height:1px;border-width:0;color:#F2F2F2;background-color:#F2F2F2">
+    <div class="new-system-not">
+        <p>Поки немає</p>
+    </div>
+        <hr style="height:1px;border-width:0;color:#F2F2F2;background-color:#F2F2F2">
+    </aside>
+    </main>    
+{% endblock %}
+
