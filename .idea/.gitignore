@@ -10,3 +10,4 @@
 migrations/
 db.sqlite3
 identifier.qslite
+_pycache_/
